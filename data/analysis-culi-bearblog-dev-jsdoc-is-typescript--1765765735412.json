@@ -1,0 +1,62 @@
+{
+  "source": "https://culi.bearblog.dev/jsdoc-is-typescript/",
+  "metaTags": {
+    "viewport": "width=device-width, initial-scale=1.0, maximum-scale=5",
+    "culi": "look-for-the-bear-necessities",
+    "title": "JSDoc *is* TypeScript",
+    "description": "In May of 2023 an  from the Svelte repo made it to the front page of the Hacker News forums. The (superficially) controversial PR seemingly vindicated TypeSc...",
+    "og:site_name": "culi.bear.blog",
+    "og:title": "JSDoc *is* TypeScript",
+    "og:type": "article",
+    "og:url": "https://culi.bearblog.dev/jsdoc-is-typescript/",
+    "og:description": "In May of 2023 an  from the Svelte repo made it to the front page of the Hacker News forums. The (superficially) controversial PR seemingly vindicated TypeSc...",
+    "og:image": "https://bear-images.sfo2.cdn.digitaloceanspaces.com/herman-1683556668-0.png",
+    "twitter:card": "summary",
+    "twitter:url": "https://culi.bearblog.dev/jsdoc-is-typescript/",
+    "twitter:title": "JSDoc *is* TypeScript",
+    "twitter:description": "In May of 2023 an  from the Svelte repo made it to the front page of the Hacker News forums. The (superficially) controversial PR seemingly vindicated TypeSc...",
+    "twitter:image": "https://bear-images.sfo2.cdn.digitaloceanspaces.com/herman-1683556668-0.png",
+    "originalTitle": "JSDoc *is* TypeScript"
+  },
+  "aiMetadata": {
+    "title": "JSDoc *is* TypeScript",
+    "shortSummary": "A developer discusses how JSDoc can serve as a substitute for TypeScript in terms of static typing, despite the common misconception that JSDoc is anti-TypeScript. The post highlights the capabilities of JSDoc in providing IntelliSense and type safety without requiring a build step, and shares personal experiences with typing a project using JSDoc comments.",
+    "category": "Tech",
+    "clickbaitScore": "Moderate",
+    "targetAudience": [
+      "Developers, TypeScript enthusiasts",
+      "Tech professionals"
+    ],
+    "keyEntities": [
+      "JSDoc",
+      "TypeScript",
+      "Hacker News",
+      "Rich Harris",
+      "Dan Abramov",
+      "React",
+      "TypeScript tooling",
+      "TypeScript IntelliSense",
+      "webpack",
+      "enums",
+      "tsconfig.json",
+      "OpenApi",
+      "GraphQL"
+    ],
+    "sentiment": "Positive",
+    "readingLevel": "Intermediate",
+    "tdr": [
+      "The discussion revolves around the relationship between JSDoc and TypeScript, emphasizing that JSDoc provides static typing features similar to TypeScript without requiring compilation. Personal anecdotes from a developer who typed a project with JSDoc comments highlight its advantages in terms of developer experience and type inference.",
+      "Common misconceptions about JSDoc being anti-TypeScript are debunked by the author's perspective. The origins of TypeScript are traced back to JavaScript tooling improvements. TypeScript is described as having IntelliSense and being the primary language service for JSDoc interpretation.",
+      "The author points out practical applications such as generating types from API schemas using JSDoc, and the convenience of CTRL/CMD shortcuts for JSDoc functions. Additionally, the post concludes with a note on the learning curve of becoming a TypeScript expert."
+    ],
+    "topics": [
+      "TypeScript",
+      "JSDoc",
+      "Developer experience",
+      "Static typing",
+      "Build tools",
+      "JavaScript ecosystems"
+    ],
+    "analyzerModelName": "ingu627/exaone4.0:1.2b"
+  }
+}
