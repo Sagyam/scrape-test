@@ -10,12 +10,16 @@ export class BlogAnalyzer {
 
         const schemaDescription = `
       {
-        "title": "A fitting title for this content",
+        "title": "Title for this content",
         "shortSummary": "A 2-3 sentence summary of the content",
         "category": "Tech, Lifestyle, Finance, etc.",
-        "clickbaitScore": "On scale of 1 being Wikipedia to 10 being a Tabloid. How much clickbait score will you give this?",
+        "clickbaitScore": "On scale of 1 being Wikipedia to 10 being a Tabloid. Compare the ORIGINAL TITLE with the content. Does the title exaggerate?",
         "targetAudience": ["List of target audience in few words"],
-        "keyEntities": ["List of specific libraries, companies, or people mentioned"]
+        "keyEntities": ["List of specific libraries, companies, or people mentioned"],
+        "sentiment": "Positive, Negative, or Neutral",
+        "readingLevel": "The approximate education level required to read this (e.g. '8th Grade', 'College', 'PhD')",
+        "tldr": ["Explain the content in bullet points"],
+        "topics": ["List of 3-5 relevant tags or topics"]
       }
     `;
 
@@ -25,6 +29,8 @@ export class BlogAnalyzer {
       Output Structure:
       ${schemaDescription}
 
+      ORIGINAL TITLE: "${content.rawMeta['originalTitle'] || content.rawMeta['og:title'] || 'Unknown'}"
+      
       TEXT CONTENT:
       ${content.rawText.substring(0, 25000)} 
       // ^ Truncating to 10k chars to prevent context overflow, adjust based on your model/needs

@@ -42,8 +42,13 @@ export class UrlLoader implements ILoader {
             }
         });
 
+        // Add the Readability title to meta if available
+        if (article.title) {
+            rawMeta['originalTitle'] = article.title;
+        }
+
         // Cleanup: Remove excessive newlines from Readability output
-        const cleanText = article.textContent.replace(/\n\s*\n/g, '\n').trim();
+        const cleanText = (article.textContent || '').replace(/\n\s*\n/g, '\n').trim();
 
         return {
             sourceType: 'url',

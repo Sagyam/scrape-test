@@ -17,6 +17,10 @@ export interface AIAnalysis {
     clickbaitScore: Number;
     targetAudience: string[];
     keyEntities: string[]; // People, companies, tools mentioned
+    sentiment: 'Positive' | 'Negative' | 'Neutral';
+    readingLevel: string; // e.g. "8th Grade", "College"
+    tldr: string[]; // Bullet points
+    topics: string[];
 }
 
 // The final combined output

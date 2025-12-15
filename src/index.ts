@@ -20,10 +20,6 @@ async function main() {
         const analyzer = new BlogAnalyzer();
         const result = await analyzer.analyze(content);
 
-        console.log('-----------------------------------------------')
-        console.log(content.rawText)
-        console.log('-----------------------------------------------')
-
         // 4. Output Result
         console.log("\n✨ Analysis Complete! ✨\n");
         console.log(JSON.stringify(result, null, 2));
