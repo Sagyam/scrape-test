@@ -27,17 +27,17 @@ jobs:
       - name: Setup Ollama
         uses: ai-action/ollama-action@v1
         with:
-          model: ingu627/exaone4.0:1.2b
+          model: ${{ vars.MODEL_NAME || 'ingu627/exaone4.0:1.2b' }}
 
       - name: Create data directory
         run: mkdir -p data
 
       - name: Run scraper and analyzer
         env:
-          MODEL_NAME: ingu627/exaone4.0:1.2b
-          MODEL_TEMPERATURE: '0.1'
-          MAX_CONTENT_LENGTH: '25000'
-          OUTPUT_DIR: ./data
+          MODEL_NAME: ${{ vars.MODEL_NAME || 'ingu627/exaone4.0:1.2b' }}
+          MODEL_TEMPERATURE: ${{ vars.MODEL_TEMPERATURE || '0.1' }}
+          MAX_CONTENT_LENGTH: ${{ vars.MAX_CONTENT_LENGTH || '25000' }}
+          OUTPUT_DIR: ${{ vars.OUTPUT_DIR || './data' }}
         run: bun run src/index.ts urls.txt
 
       - name: Commit scraped data

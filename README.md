@@ -48,6 +48,17 @@ This project includes a GitHub Actions workflow that:
 
 The workflow is defined in `.github/workflows/scrape-and-analyze.yml`.
 
+#### Configuring GitHub Actions Variables
+
+You can optionally configure the following repository variables (Settings > Secrets and variables > Actions > Variables):
+
+- `MODEL_NAME` - Ollama model to use (default: `ingu627/exaone4.0:1.2b`)
+- `MODEL_TEMPERATURE` - Model temperature (default: `0.1`)
+- `MAX_CONTENT_LENGTH` - Maximum content length (default: `25000`)
+- `OUTPUT_DIR` - Output directory (default: `./data`)
+
+If these variables are not set, the workflow will use the hardcoded default values.
+
 ## Project Structure
 
 - `src/index.ts` - Main entry point, handles URL processing
