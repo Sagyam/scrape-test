@@ -2,7 +2,9 @@
 import ollama from 'ollama';
 import type { ContentSource, AIAnalysis, ParsedBlog } from './types';
 
-const MODEL_NAME = 'ingu627/exaone4.0:1.2b';
+const MODEL_NAME = process.env.MODEL_NAME || 'ingu627/exaone4.0:1.2b';
+const MODEL_TEMPERATURE = parseFloat(process.env.MODEL_TEMPERATURE || '0.1');
+const MAX_CONTENT_LENGTH = parseInt(process.env.MAX_CONTENT_LENGTH || '25000');
 
 export class BlogAnalyzer {
     async analyze(content: ContentSource): Promise<ParsedBlog> {
@@ -25,15 +27,15 @@ export class BlogAnalyzer {
 
         const prompt = `
       Analyze the following blog post text and extract metadata into a strict JSON object.
-      
+
       Output Structure:
       ${schemaDescription}
 
       ORIGINAL TITLE: "${content.rawMeta['originalTitle'] || content.rawMeta['og:title'] || 'Unknown'}"
-      
+
       TEXT CONTENT:
-      ${content.rawText.substring(0, 25000)} 
-      // ^ Truncating to 10k chars to prevent context overflow, adjust based on your model/needs
+      ${content.rawText.substring(0, MAX_CONTENT_LENGTH)}
+      // ^ Truncating to prevent context overflow, adjust based on your model/needs
     `;
 
 
@@ -41,7 +43,7 @@ export class BlogAnalyzer {
             model: MODEL_NAME,
             format: 'json',
             options: {
-                temperature: 0.1,
+                temperature: MODEL_TEMPERATURE,
             },
             messages: [{ role: 'user', content: prompt }],
             stream: false,

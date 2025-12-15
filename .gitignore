@@ -1,7 +1,6 @@
 # dependencies (bun install)
 node_modules
 
-/data
 
 # output
 out
@@ -23,6 +22,9 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 .env.test.local
 .env.production.local
 .env.local
+
+# Keep example env file
+!.env.example
 
 # caches
 .eslintcache

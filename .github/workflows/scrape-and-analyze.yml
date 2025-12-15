@@ -1,0 +1,49 @@
+name: Scrape and Analyze URLs
+
+on:
+  workflow_dispatch: # Manual trigger
+  schedule:
+    - cron: '0 0 * * 0' # Weekly on Sunday at midnight UTC
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-and-analyze:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Setup Ollama
+        uses: ai-action/ollama-action@v1
+        with:
+          model: ingu627/exaone4.0:1.2b
+
+      - name: Create data directory
+        run: mkdir -p data
+
+      - name: Run scraper and analyzer
+        env:
+          MODEL_NAME: ingu627/exaone4.0:1.2b
+          MODEL_TEMPERATURE: '0.1'
+          MAX_CONTENT_LENGTH: '25000'
+          OUTPUT_DIR: ./data
+        run: bun run src/index.ts urls.txt
+
+      - name: Commit scraped data
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/*.json
+          git diff --staged --quiet || git commit -m "chore: Update scraped analysis data [skip ci]"
+          git push
