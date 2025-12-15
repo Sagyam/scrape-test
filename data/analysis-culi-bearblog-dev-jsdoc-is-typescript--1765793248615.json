@@ -1,0 +1,51 @@
+{
+  "source": "https://culi.bearblog.dev/jsdoc-is-typescript/",
+  "metaTags": {
+    "viewport": "width=device-width, initial-scale=1.0, maximum-scale=5",
+    "culi": "look-for-the-bear-necessities",
+    "title": "JSDoc *is* TypeScript",
+    "description": "In May of 2023 an  from the Svelte repo made it to the front page of the Hacker News forums. The (superficially) controversial PR seemingly vindicated TypeSc...",
+    "og:site_name": "culi.bear.blog",
+    "og:title": "JSDoc *is* TypeScript",
+    "og:type": "article",
+    "og:url": "https://culi.bearblog.dev/jsdoc-is-typescript/",
+    "og:description": "In May of 2023 an  from the Svelte repo made it to the front page of the Hacker News forums. The (superficially) controversial PR seemingly vindicated TypeSc...",
+    "og:image": "https://bear-images.sfo2.cdn.digitaloceanspaces.com/herman-1683556668-0.png",
+    "twitter:card": "summary",
+    "twitter:url": "https://culi.bearblog.dev/jsdoc-is-typescript/",
+    "twitter:title": "JSDoc *is* TypeScript",
+    "twitter:description": "In May of 2023 an  from the Svelte repo made it to the front page of the Hacker News forums. The (superficially) controversial PR seemingly vindicated TypeSc...",
+    "twitter:image": "https://bear-images.sfo2.cdn.digitaloceanspaces.com/herman-1683556668-0.png",
+    "originalTitle": "JSDoc *is* TypeScript"
+  },
+  "aiMetadata": {
+    "title": "JSDoc *is* TypeScript",
+    "shortSummary": "A developer discusses the post-mortem analysis of a TypeScript vs JSDoc debate on Hacker News, highlighting the author's perspective on the date range of the event and the technical background on TypeScript's development and the relationship between JSDoc and TypeScript.",
+    "category": "Tech",
+    "clickbaitScore": "Moderate",
+    "targetAudience": [
+      "Developers",
+      "TypeScript enthusiasts"
+    ],
+    "keyEntities": [
+      "JSDoc",
+      "TypeScript",
+      "Hacker News",
+      "Dan Abramov",
+      "React",
+      "tsconfig.json",
+      "OpenAPI",
+      "GraphQL"
+    ],
+    "sentiment": "Neutral",
+    "readingLevel": "College",
+    "tdr": [
+      "- Internal refactoring PR from Svelte repo makes TypeScript defenders claim victory on HN",
+      "- TypeScript is a build tool for JSDoc-based IntelliSense",
+      "- JSDoc and TypeScript share the same static analysis capabilities",
+      "- Rewriting a project with JSDoc comments leads to better type inference practices",
+      "- Webpack migration to JSDoc syntax"
+    ],
+    "analyzerModelName": "ingu627/exaone4.0:1.2b"
+  }
+}
