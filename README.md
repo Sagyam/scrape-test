@@ -1,4 +1,4 @@
-# azure-labs
+# Ollam Blog Analyzer
 
 A blog/article analyzer powered by Ollama and the exaone4.0:1.2b model. Scrapes URLs and generates AI-powered metadata analysis.
 
