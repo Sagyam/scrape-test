@@ -1,0 +1,52 @@
+{
+  "source": "https://culi.bearblog.dev/jsdoc-is-typescript/",
+  "metaTags": {
+    "viewport": "width=device-width, initial-scale=1.0, maximum-scale=5",
+    "culi": "look-for-the-bear-necessities",
+    "title": "JSDoc *is* TypeScript",
+    "description": "In May of 2023 an  from the Svelte repo made it to the front page of the Hacker News forums. The (superficially) controversial PR seemingly vindicated TypeSc...",
+    "og:site_name": "culi.bear.blog",
+    "og:title": "JSDoc *is* TypeScript",
+    "og:type": "article",
+    "og:url": "https://culi.bearblog.dev/jsdoc-is-typescript/",
+    "og:description": "In May of 2023 an  from the Svelte repo made it to the front page of the Hacker News forums. The (superficially) controversial PR seemingly vindicated TypeSc...",
+    "og:image": "https://bear-images.sfo2.cdn.digitaloceanspaces.com/herman-1683556668-0.png",
+    "twitter:card": "summary",
+    "twitter:url": "https://culi.bearblog.dev/jsdoc-is-typescript/",
+    "twitter:title": "JSDoc *is* TypeScript",
+    "twitter:description": "In May of 2023 an  from the Svelte repo made it to the front page of the Hacker News forums. The (superficially) controversial PR seemingly vindicated TypeSc...",
+    "twitter:image": "https://bear-images.sfo2.cdn.digitaloceanspaces.com/herman-1683556668-0.png",
+    "originalTitle": "JSDoc *is* TypeScript"
+  },
+  "aiMetadata": {
+    "type": "function",
+    "function": {
+      "name": "get_weather",
+      "description": "获取当前天气情况，包括温度、湿度、风速等信息。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "需要查询的地点，例如：'北京'、'上海'。",
+            "min_length": 2,
+            "max_length": 50
+          },
+          "date": {
+            "type": "string",
+            "description": "查询日期，格式为 YYYY-MM-DD。",
+            "min_length": 4,
+            "max_length": 10
+          },
+          "time": {
+            "type": "string",
+            "description": "查询时间，格式为 HH:MM。",
+            "min_length": 2,
+            "max_length": 5
+          }
+        }
+      }
+    },
+    "analyzerModelName": "qwen3-vl:2b"
+  }
+}
